@@ -37,4 +37,4 @@ dat <- dat[,-1]
 
 meltDat <- melt(dat,(id.vars=c("SubjectID","Activity")))
 meanData <- dcast(meltDat, SubjectID + Activity ~ variable, mean)
-write.table(meanData, "tidy_data.txt", sep = ",")
+write.table(meanData, "tidy_data.txt", sep = ",", row.name=FALSE)
